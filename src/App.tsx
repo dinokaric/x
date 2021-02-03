@@ -1,8 +1,11 @@
+import {Greeting} from './components/greeting/Greeting';
+
 function App() {
   return (
-    <div>
-
-    </div>
+    <>
+      <Greeting />
+      <Greeting />
+    </>
   );
 }
 
