@@ -6,6 +6,8 @@ import { UserContext } from '../../../shared/provider/UserProvider';
 import RoutingPath from '../../../routes/RoutingPath';
 import {Profile} from '../../profile/Profile';
 
+
+
 export const DesktopNavigation = () => {
   const history = useHistory();
   const [authUser, setAuthUser] = useContext(UserContext);
@@ -27,7 +29,6 @@ export const DesktopNavigation = () => {
       <span onClick={() => history.push(RoutingPath.homeView)}>Guidelines</span>
       {/* <span onClick={() => history.push(RoutingPath.signInView)}>{authUser?.username || 'Sign in'}</span> */}
       {displaySignInOrUsername()}
-
     </div>
   )
 }
