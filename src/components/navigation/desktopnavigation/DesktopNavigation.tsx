@@ -5,6 +5,7 @@ import { useContext } from 'react';
 import { UserContext } from '../../../shared/provider/UserProvider';
 import RoutingPath from '../../../routes/RoutingPath';
 import {Profile} from '../../profile/Profile';
+import { DesktopNavigationTabs } from './desktopnavigationtabs/DesktopNavigationTabs';
 
 
 
@@ -14,8 +15,8 @@ export const DesktopNavigation = () => {
 
   function displaySignInOrUsername() {
     return authUser 
-      ? <Profile />
-      : <span onClick={() => history.push(RoutingPath.signInView)}>Sign in</span>
+      ? <div className='profile'><Profile  /></div>
+      : <span onClick={() => history.push(RoutingPath.signInView)} className='signInButton'>Sign in</span>
   }
 
   return (
@@ -23,10 +24,10 @@ export const DesktopNavigation = () => {
       <img className="navigationLogotype"
         src={Logotype}
         alt={'Logotype'} />
-      <span onClick={() => history.push(RoutingPath.homeView)}>Products</span>
-      <span onClick={() => history.push(RoutingPath.aboutView)}>Brands</span>
-      <span onClick={() => history.push(RoutingPath.homeView)}>News</span>
-      <span onClick={() => history.push(RoutingPath.homeView)}>Guidelines</span>
+
+      <div className='desktopNavigationTabs'>
+        <DesktopNavigationTabs />
+      </div>
       {/* <span onClick={() => history.push(RoutingPath.signInView)}>{authUser?.username || 'Sign in'}</span> */}
       {displaySignInOrUsername()}
     </div>

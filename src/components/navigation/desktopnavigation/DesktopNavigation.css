@@ -2,8 +2,24 @@
   display: grid;
   grid-template-columns: repeat(20, 1fr);
   background: #b4d5d1;
+  align-items: center;
+  justify-items: center;
 }
 
 .navigationLogotype{
   width: 90px;
+  grid-column: 3/4;
+}
+
+.signInButton, .profile{
+  grid-column: span 2 / -1;
+  cursor: pointer;
+  color:white;
+  font-weight: 900;
+  font-family: 'Roboto', sans-serif;
+  padding: 2%;
+}
+
+.desktopNavigationTabs {
+  grid-column: 7/9;
 }
