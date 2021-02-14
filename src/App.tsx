@@ -1,8 +1,8 @@
 import './shared/css/Global.css';
 
 import { Routes } from './routes/Routes';
-import { DesktopNavigation } from './components/navigation/desktopnavigation/DesktopNavigation';
 import { UserProvider } from './shared/provider/UserProvider';
+import { Navigation } from './components/navigation/Navigation';
 
 
 
@@ -11,7 +11,7 @@ function App() {
     <>
       <UserProvider>
         <Routes>
-          <DesktopNavigation />
+          <Navigation />
         </Routes>
       </UserProvider>
     </>
