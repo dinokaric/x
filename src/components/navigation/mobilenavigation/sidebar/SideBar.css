@@ -13,7 +13,7 @@
 
 .side-drawer.open {
   transform: translateX(0%);
-  background-color: red;
+  background-color: rgb(130, 149, 201);
   box-shadow: 1px 0px 7px rgba(0,0,0);
 
 }
