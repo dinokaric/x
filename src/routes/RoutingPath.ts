@@ -6,6 +6,9 @@ const expertiseView = '/expertise';
 const newsView ='/news';
 const shopView = '/shop';
 
+// Authenticated routes below
+const settingsView = '/user/settings';
+
 export default {
   homeView,
   signInView,
@@ -13,5 +16,6 @@ export default {
   brandsView,
   expertiseView,
   newsView,
-  shopView
+  shopView,
+  settingsView
 }

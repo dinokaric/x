@@ -22,7 +22,7 @@ export const SideBar = (props: { drawerIsOpen: boolean; drawerHandler: (value: b
       </button>
 
       <ul>
-        <li onClick={() => handleNavigation(RoutingPath.homeView)}>Butik</li>
+        <li onClick={() => handleNavigation(RoutingPath.shopView)}>Butik</li>
         <li onClick={() => handleNavigation(RoutingPath.accessoriesView)}>
           Accessoarer
         </li>
