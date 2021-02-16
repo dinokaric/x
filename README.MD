@@ -1,0 +1,1 @@
+Api call's finns i /shop /brands
