@@ -9,7 +9,7 @@ const shopView = '/shop';
 // Authenticated routes below
 const settingsView = '/user/settings';
 
-export default {
+const RoutingPath = {
   homeView,
   signInView,
   accessoriesView,
@@ -19,3 +19,5 @@ export default {
   shopView,
   settingsView
 }
+
+export default RoutingPath;

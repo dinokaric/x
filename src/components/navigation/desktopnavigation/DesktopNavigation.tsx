@@ -11,7 +11,7 @@ import { DesktopNavigationTabs } from './desktopnavigationtabs/DesktopNavigation
 
 export const DesktopNavigation = () => {
   const history = useHistory();
-  const [authUser, setAuthUser] = useContext(UserContext);
+  const [authUser, ] = useContext(UserContext);
 
   function displaySignInOrUsername() {
     return authUser 

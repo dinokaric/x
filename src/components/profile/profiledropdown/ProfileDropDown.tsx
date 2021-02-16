@@ -8,7 +8,7 @@ import RoutingPath from '../../../routes/RoutingPath';
 export const ProfileDropDown = () => {
   const history = useHistory();
 
-  const [authUser, setAuthUser] = useContext(UserContext);
+  const [, setAuthUser] = useContext(UserContext);
 
   const logout = () => {
     localStorage.removeItem('user');

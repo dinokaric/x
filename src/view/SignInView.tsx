@@ -8,7 +8,7 @@ import {UserContext} from '../shared/provider/UserProvider';
 export const SignInView = () => {
   const history = useHistory();
   const [loginCredentials, setloginCredentials] = useState<ILoginCredentials>({ username: '', password: '' });
-  const [authUser, setAuthUser] = useContext(UserContext);
+  const [, setAuthUser] = useContext(UserContext);
 
   const updateLoginCredentialsState = (e : React.ChangeEvent<HTMLInputElement>, field: keyof ILoginCredentials) => {
     setloginCredentials({...loginCredentials, [field]: e.target.value });

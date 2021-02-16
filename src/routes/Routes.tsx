@@ -1,4 +1,4 @@
-import { BrowserRouter, Switch, Route, useHistory} from 'react-router-dom'
+import { BrowserRouter, Switch, Route} from 'react-router-dom'
 import { HomeView } from '../view/HomeView';
 import { SignInView } from '../view/SignInView';
 import { UserContext } from '../shared/provider/UserProvider';
@@ -14,7 +14,7 @@ import { SettingsView } from '../view/authenticatedviews/SettingsView';
 
 export const Routes = ({ children }: { children: React.ReactChild }) => {
   const [authUser, setAuthUser] = useContext(UserContext);
-  const history = useHistory();
+
 
   const blockRouteIfAuthenticated = (allowedView: React.FC, notAllowedView: React.FC) => {
     return (!authUser) ? allowedView : notAllowedView;
@@ -34,7 +34,6 @@ export const Routes = ({ children }: { children: React.ReactChild }) => {
     <BrowserRouter>
       {children}
       <Switch>
-        
         <Route exact path={RoutingPath.signInView} component={blockRouteIfAuthenticated(SignInView, HomeView)} />
         <Route exact path={RoutingPath.homeView} component={HomeView} />
         <Route exact path={RoutingPath.accessoriesView} component={AccessoriesView} />

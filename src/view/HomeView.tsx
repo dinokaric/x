@@ -1,4 +1,3 @@
-import { useEffect, useState } from 'react';
 
 export const HomeView = () => {
   // const [number, setNumber] = useState(0);

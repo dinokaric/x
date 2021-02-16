@@ -1,16 +1,11 @@
 import { useState, useEffect } from 'react'
-import StarWarsAPIService from '../../../shared/api/service/StarWarsAPIService';
-
-
-interface IPokemonData {
-  name: string,
-  height: number,
-  weight: number
-}
+import PokemonAPIService from '../../../shared/api/service/PokemonAPIService';
+import { useDebounce } from '../../../hooks/useDebounce';
 
 export const ShopView = () => {
   const [pokemonData, setPokemonData] = useState<any>();
   const [pokemonId, setPokemonId] = useState<number>(1);
+  // const debounceSearchTerm = useDebounce(pokemonId, 500); // use later
 
   useEffect(() => {
     getDataFromPokemonApi(pokemonId)
@@ -24,7 +19,7 @@ export const ShopView = () => {
 
   const getDataFromPokemonApi = async (idx: number) => {
     try {
-      const response = await StarWarsAPIService.getPokemonById(idx);
+      const response = await PokemonAPIService.getPokemonById(idx);
       setPokemonData(response);
     } catch (e) {
       console.log(e);
